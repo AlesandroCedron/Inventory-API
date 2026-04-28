@@ -44,7 +44,7 @@ app.use('/api/orders', orderRoutes);
 
 
 app.get('/', (req, res) => {
-  res.send('Inventory API is running 🚀');
+  res.send('Inventory API is running ');
 });
 
 app.use((req, res, next) => {

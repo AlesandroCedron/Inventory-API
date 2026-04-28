@@ -3,6 +3,8 @@ import morgan from 'morgan';
 import swaggerUi from 'swagger-ui-express';
 import yaml from 'js-yaml';
 import fs from 'fs';
+import cors from 'cors';
+
 
 import productRoutes from './routes/productRoute.js';
 import categoryRoutes from './routes/categoryRoute.js';
@@ -12,6 +14,7 @@ import authRoutes from './routes/authRoutes.js';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(express.json());
 
 if (process.env.NODE_ENV !== 'test') {
